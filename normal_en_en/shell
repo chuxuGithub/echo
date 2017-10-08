@@ -1,0 +1,4 @@
+for((i=1;i<=20;i++));
+  do
+    ./echoClient 192.168.30.100 < a.c &
+  done
