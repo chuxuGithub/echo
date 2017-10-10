@@ -22,6 +22,10 @@ int readHead(BufferRW & bufferRW,int size)//size = 4
   int headLen;
   if((count=readn(fd,(char *)&headLen,size)) != size) 
   {
+    if(count == 0)
+    {
+	exit(0);
+    }	    
     printf("readn error!\n");
     exit(0);
   }
@@ -56,7 +60,7 @@ int readn(int fd,char *buffer,int n)
       }
       else
       {
-        printf("read error!\n");
+        //printf("read error!\n");
         exit(0);
       }
     }

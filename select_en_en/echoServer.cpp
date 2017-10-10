@@ -12,7 +12,7 @@ using namespace std;
 
 #define HeadSize 4
 
-#define FD_SETSIE 100
+#define FD_SETSIE 1024
 
 int main(int argc,char** argv)
 {
